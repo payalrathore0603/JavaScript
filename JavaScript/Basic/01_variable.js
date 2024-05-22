@@ -1,6 +1,6 @@
-const userId=1234;
-let userName="Payal";
-var userEmail="payal@gmail.com" //var perfer not to use due issue of block scope and funtion scope
+const userId=1234;          //// not redecalre, not initialize multiple time 
+let userName="Payal";    // not redecalre, initialize multiple time 
+var userEmail="payal@gmail.com" //var perfer not to use due issue of block scope and funtion scope, redeclare 
 
 userPassword="payal" //not to use
 

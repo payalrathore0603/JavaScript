@@ -49,9 +49,40 @@ const data1=[
 //====== keys and values in array
 
 // console.log(data[1].name);
-console.log(Object.keys(data1))
-console.log(Object.values(data1))
-console.log(Object.entries(data1))
+// console.log(Object.keys(data1))
+// console.log(Object.values(data1))
+// console.log(Object.entries(data1))
+
+//============== De-Structuring=================
+
+const course= {
+    subject:"coding",
+    courseIntructor:"hitesh",
+    durations: "3-years"
+}
+
+// console.log(course);
+// console.log(courseIntructor); // give error
+// const {courseIntructor}=course
+// console.log(courseIntructor);
+
+const {courseIntructor: instructor}=course
+console.log(instructor);
+
+
+// =============== JSON ================
+
+{
+    "name":"payal",
+    "price":"234"
+}
+
+[
+    {},
+    {}
+]
+
+
 
 
 

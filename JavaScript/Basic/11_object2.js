@@ -72,10 +72,10 @@ console.log(instructor);
 
 // =============== JSON ================
 
-{
-    "name":"payal",
-    "price":"234"
-}
+// {
+//     "name":"payal",
+//     "price":"234"
+// }
 
 [
     {},

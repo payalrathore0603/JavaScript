@@ -21,5 +21,3 @@
 
 //==========================  QuerySelector and QureySelectorALL (retrun HTML Collection) =================
 
-
-

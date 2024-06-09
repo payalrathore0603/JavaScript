@@ -4,8 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(32, 30, 30);
+            color: blanchedalmond;
+        }
+    </style>
 </head>
 <body>
-    <div></div>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+    </div>
+</div>
 </body>
+<script>
+    // console.log(document.querySelector('.parent'));
+    // const parent=document.querySelector('.parent')
+
+    // console.log(parent.children);
+    // console.log(parent.firstChild);
+    // console.log(parent.lastElementChild);
+
+    // const dayOne=document.querySelector(".day")
+    // console.log(dayOne.parentElement);
+    // console.log(dayOne.nextElementSibling);
+
+    //Create Element
+    const div=document.createElement('div')  //memory
+    div.style.background="green"
+    
+
+    //============== On Page
+    //1. div.innerHTML="Sunday"
+    const addData=document.createTextNode("Shiv Accademy")
+    div.append(addData)
+
+    document.body.appendChild(div)
+
+
+
+</script>
 </html>
+

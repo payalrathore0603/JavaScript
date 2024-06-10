@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        .box{
+            height: 50px;
+            width: 50px;
+            border: 2px soild black;
+            margin: 2px;
+        }
+        #gray{
+            background-color: gray;
+        }
+        #white{
+            background-color: rgb(230, 230, 198);
+        }
+        #blue{
+            background-color: blue;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Color Scheme Switcher</h1>
+        <button onclick="grayClick()" class="box" id="gray"></button>
+        <button onclick="whiteClick()" class="box" id="white"></button>
+        <button onclick="blueClick()" class="box" id="blue"></button>
+        <button onclick="yellowClick()" class="box" id="yellow"></button>
+        <p>Tey to clicking on one of the colors above to chnage thebackground color of this page!</p>
+    </div>
+   
+</body>
+<script src="colorSwitch.js"></script>
+</html>

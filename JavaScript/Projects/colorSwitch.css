@@ -1,0 +1,26 @@
+.box{
+    height: 50px;
+    width: 50px;
+    border: 2px soild black;
+    margin: 2px;
+}
+#grey{
+    background-color: gray;
+}
+#white{
+    background-color: rgb(230, 230, 198);
+}
+#blue{
+    background-color: blue;
+}
+#yellow{
+    background-color: yellow;
+}
+
+.button{
+    height: 50px;
+    width: 50px;
+    margin: 2px;
+    display: inline-block; 
+    border: 2px soild black;
+}

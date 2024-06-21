@@ -21,12 +21,25 @@
 
 
 
+    const randomFunction=function(){
+            const hex="0123456789ABCDEF"
+            let color ="#"
+            for (let index = 0; index < 6; index++) {
+                color += hex[Math.floor(Math.random()*16)]   
+            }
+            return color;
+    
+    }
+
+    console.log(randomFunction());
+
+
     let refOfsetback;
     document.querySelector('#start').addEventListener('click',function(){
         refOfsetback=setInterval(function(){
-            
-            document.querySelector('body').style.backgroundColor= `#${parseInt(Math.random()*10000+1)}`
-            console.log("color changing");
+            // document.querySelector('body').style.backgroundColor= `#${parseInt(Math.random()*10000+1)}`
+            document.querySelector('body').style.backgroundColor= randomFunction();
+                        console.log("color changing");
         },1000)
     })
 

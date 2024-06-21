@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Keep Going...</h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // --------- SetInterval : it will take 3rd parameter as well
+
+    const keepchange=function(str){
+        console.log(str);
+    }
+
+    let clearIntervalforPopup;
+    document.querySelector('#start').addEventListener('click',function(){
+        clearIntervalforPopup= setInterval(keepchange
+        ,2000, "I'm in interval")
+    })
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(clearIntervalforPopup)
+        console.log("Clear interval");
+    })
+   
+</script>
+</html>

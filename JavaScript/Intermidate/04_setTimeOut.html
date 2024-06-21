@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Keep Going...</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //----------------First approch
+    // setTimeout(function(){
+    //     console.log("Hello GM..");
+    // },2000)
+
+    //----------------Second
+
+    // const func=function(){
+    //     console.log("Hello GM..");
+    // }
+    //  setTimeout(func,2000)
+
+     // ------------ clearTimeOut: pass refernce of setTime to clear
+
+     const func=function(){
+        console.log("Hello GM..");
+    }
+     const clearfunc=setTimeout(func,3000)
+
+    //  clearTimeout(clearfunc)
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(clearfunc)
+        console.log("Clear run successfully"); 
+    })
+
+
+    
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Erlier we use XMLHttpRequest = Ajax Programming-->
+
+    <h1>XMLHttpRequest</h1>
+</body>
+    <Script>
+        const requestUrl="https://api.github.com/users/hiteshchoudhary"
+        const xlr= new XMLHttpRequest();
+        // console.log(typeof xlr);
+        xlr.open('GET',requestUrl)
+       xlr.onreadystatechange=function(){
+        console.log(xlr.readyState)
+        if(xlr.readyState===4){
+            // const data=this.responseText
+            // console.log(data);  // coming in string make it to json
+            const data=JSON.parse(this.responseText)
+            console.log(data.twitter_username);
+        }
+       }
+       xlr.send()
+    </Script>
+</html>

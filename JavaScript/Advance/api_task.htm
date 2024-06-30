@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="card hCard" style="width: 18rem;">
+        <!-- <img class="card-img-top hCard" src="" alt="Card image cap"> -->
+        <div class="card-body">
+          <h5 class="card-title">Hitesh Card</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">More info</a>
+        </div>
+      </div>
+</body>
+    <script>
+        const requestUrl="https://api.github.com/users/hiteshchoudhary"
+        const xlr=new XMLHttpRequest();
+        xlr.open('GET',requestUrl)
+        xlr.onreadystatechange=function(){
+            console.log(xlr.readyState);
+            if(xlr.readyState===4){
+                const data=JSON.parse(this.responseText);
+                document.querySelector('.btn').addEventListener('click',function(){
+                    const img=document.createElement('img')
+                    img.id="hImage"
+                    img.className="card-img-top hCard"
+                    img.setAttribute("src",`${data.avatar_url}`)
+                    const parentH= document.querySelector('.card-body')
+                    console.log(parentH.append(img));
+                    
+                })
+            }
+        }
+        xlr.send();
+    </script>
+
+</html>

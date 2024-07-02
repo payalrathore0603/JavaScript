@@ -34,17 +34,17 @@
 
 //================= Four
 
-const promiseFour= new Promise(function(resolve,reject){
-    setTimeout(function(){
-        let error=false;
-        if(!error){
-            resolve({username:"payal",email:"Payal@"})
-        }
-        else{
-            reject('Error: Something went wrong')
-        }
-    },1000)
-})
+// const promiseFour= new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         let error=true;
+//         if(!error){
+//             resolve({username:"payal",email:"Payal@"})
+//         }
+//         else{
+//             reject('Error: Something went wrong')
+//         }
+//     },1000)
+// })
 
 
 
@@ -69,9 +69,9 @@ const promiseFour= new Promise(function(resolve,reject){
 
 // const promiseFive= new Promise(function(resolve,reject){
 //     setTimeout(function(){
-//         let error=false;
+//         let error=true;
 //         if(!error){
-//             resolve({username:"payal",email:"Payal@"})
+//             resolve({username:"js",email:"Payal@"})
 //         }
 //         else{
 //             reject('Error: Something went wrong')
@@ -79,8 +79,50 @@ const promiseFour= new Promise(function(resolve,reject){
 //     },1000)
 // })
 
-// async function consumePromiseFour(){
-//     try{
-
-//     }
+// async function consumePromiseFive(){
+//    try {
+//     const response=await promiseFive // PromiseFive is object not a funtion
+//     console.log(response);
+//    } 
+//    catch (error) {
+//     console.log("Error: In JS");
+//    }
 // }
+
+
+// consumePromiseFive()
+
+
+
+//========== Await: Using await pauses the execution of its surrounding async function until the promise is settled (that is, fulfilled or rejected)
+// async function getAllUsers(){
+//  try {
+//     const response=await fetch("https://jsonplaceholder.typicode.com/users") // return Promise  // Await it will take time 
+//     console.log(typeof response); //object
+//     const data=await response.json() // convert into json
+//     console.log(data);
+//  } catch (error) {
+//     console.log("E:error");
+//  }
+
+// }
+
+// getAllUsers()
+
+
+async function getAllUsers(){
+    const response=await fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response)=>{
+        return response.json()
+    })
+    .then((data)=>{
+        console.log(typeof data);
+    })
+   .catch((error)=>{
+    console.log(error);
+   })
+}
+
+
+getAllUsers()
+
